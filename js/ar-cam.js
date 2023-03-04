@@ -29,8 +29,8 @@ window.onload = () =>
     rotationLog = document.getElementById('rotationLog');
     zoomLog = document.getElementById('zoomLog');
     entity = document.getElementById("theModel");
-    moveButton = document.getElementById('move-button');
-    rotateButton = document.getElementById('rotate-button');
+    //moveButton = document.getElementById('move-button');
+    //rotateButton = document.getElementById('rotate-button');
 
     loadingOverlay = document.getElementById('loading-overlay');
     fullscreenOverlay = document.getElementById('fullscreen-overlay');
@@ -43,21 +43,22 @@ window.onload = () =>
     handleOrientation();
     handleFullScreen();
 
-    document.getElementById("save-capture-button").addEventListener('click', () =>
-    {
-        let link = document.createElement("a");
-        let fileName = new Date().toLocaleString().replaceAll(':', '-').replaceAll('/', '-') + " AR.png";
-        link.download = fileName;
-        link.setAttribute("download", fileName);
-        link.setAttribute("href", document.getElementById('preview-img').src);
-        link.click();
+    //document.getElementById("save-capture-button").addEventListener('click', () =>
+    //{
+    //    let link = document.createElement("a");
+    //    let fileName = new Date().toLocaleString().replaceAll(':', '-').replaceAll('/', '-') + " AR.png";
+    //    link.download = fileName;
+    //    link.setAttribute("download", fileName);
+    //    link.setAttribute("href", document.getElementById('preview-img').src);
+    //    link.click();
 
-        makeOverlay('preview', 'hide');
-    });
-    document.getElementById("retake-button").addEventListener('click', () =>
-    {
-        makeOverlay('preview', 'hide');
-    });
+    //    makeOverlay('preview', 'hide');
+    //});
+
+    //document.getElementById("retake-button").addEventListener('click', () =>
+    //{
+    //    makeOverlay('preview', 'hide');
+    //});
 
     entity.addEventListener("model-loaded", () => { makeOverlay('loading', 'hide'); });
     window.matchMedia('screen and (orientation:portrait)')

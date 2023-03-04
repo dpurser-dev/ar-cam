@@ -32,30 +32,31 @@ function calculateDirection(angle)
     //     return null
 }
 
-function toggleMove()
-{
-    if (moveMode)
-        moveButton.classList.remove('toggle-active');
-    else
-    {
-        moveButton.classList.add('toggle-active');
-        rotateButton.classList.remove('toggle-active');
-        rotateMode = false;
-    }
+//function toggleMove()
+//{
+//    if (moveMode)
+//        moveButton.classList.remove('toggle-active');
+//    else
+//    {
+//        moveButton.classList.add('toggle-active');
+//        rotateButton.classList.remove('toggle-active');
+//        rotateMode = false;
+//    }
+//
+//    moveMode = !moveMode;
+//}
 
-    moveMode = !moveMode;
-}
 
-function toggleRotate()
-{
-    if (rotateMode)
-        rotateButton.classList.remove('toggle-active');
-    else
-    {
-        rotateButton.classList.add('toggle-active');
-        moveButton.classList.remove('toggle-active');
-        moveMode = false;
-    }
-
-    rotateMode = !rotateMode;
-}
+//function toggleRotate()
+//{
+//    if (rotateMode)
+//        rotateButton.classList.remove('toggle-active');
+//    else
+//    {
+//        rotateButton.classList.add('toggle-active');
+//        moveButton.classList.remove('toggle-active');
+//        moveMode = false;
+//    }
+//
+//    rotateMode = !rotateMode;
+//}
