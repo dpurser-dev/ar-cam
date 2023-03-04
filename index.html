@@ -2,7 +2,7 @@
 <html>
 <script src="./js/vendor/aframe.min.js"></script>
 <script src="./js/vendor/aframe-ar.js"></script>
-<script src="./js/vendor/zingtouch.min.js"></script>
+<!--<script src="./js/vendor/zingtouch.min.js"></script> -->
 
 <script src="./js/3d-ops.js"></script>
 <script src="./js/ar-cam.js"></script>
@@ -38,6 +38,7 @@
         </div>
         <span class="lato">rotate device</span>
     </div>
+    <!--
     <div class="overlay" id="snap-overlay">
         <span class="lato">capturing...</span>
     </div>
@@ -51,6 +52,7 @@
             </div>
         </div>
     </div>
+    -->
 
     <!-- <div id="log"></div> -->
     <section class="log" style="display: none;">
@@ -64,10 +66,11 @@
         <button onclick="Y()">Y</button>
         <button onclick="Z()">Z</button>
         <button onclick="P()">P</button> 
-        -->
+        
         <button id="move-button" class="toggler" onclick="toggleMove()"></button>
         <button id="snap-button" onclick="getSnap()"></button>
         <button id="rotate-button" class="toggler" onclick="toggleRotate()"></button>
+        -->
     </section>
     <a-scene id="scene" embedded arjs vr-mode-ui="enabled: false"
         renderer="antialias: true; logarithmicDepthBuffer: true; colorManagement: true; sortObjects: true;">
