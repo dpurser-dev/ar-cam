@@ -29,51 +29,50 @@ window.onload = () =>
     rotationLog = document.getElementById('rotationLog');
     zoomLog = document.getElementById('zoomLog');
     entity = document.getElementById("theModel");
-    //moveButton = document.getElementById('move-button');
-    //rotateButton = document.getElementById('rotate-button');
+    moveButton = document.getElementById('move-button');
+    rotateButton = document.getElementById('rotate-button');
 
-    //loadingOverlay = document.getElementById('loading-overlay');
-    //fullscreenOverlay = document.getElementById('fullscreen-overlay');
-    //rotateOverlay = document.getElementById('rotate-overlay');
-    //snapOverlay = document.getElementById('snap-overlay');
-    //previewOverlay = document.getElementById('preview-overlay');
+    loadingOverlay = document.getElementById('loading-overlay');
+    fullscreenOverlay = document.getElementById('fullscreen-overlay');
+    rotateOverlay = document.getElementById('rotate-overlay');
+    snapOverlay = document.getElementById('snap-overlay');
+    previewOverlay = document.getElementById('preview-overlay');
 
-    //makeOverlay('snap', 'hide');
-    //makeOverlay('preview', 'hide');
-    //handleOrientation();
-    //handleFullScreen();
+    makeOverlay('snap', 'hide');
+    makeOverlay('preview', 'hide');
+    handleOrientation();
+    handleFullScreen();
 
-    //document.getElementById("save-capture-button").addEventListener('click', () =>
-    //{
-    //    let link = document.createElement("a");
-    //    let fileName = new Date().toLocaleString().replaceAll(':', '-').replaceAll('/', '-') + " AR.png";
-    //    link.download = fileName;
-    //    link.setAttribute("download", fileName);
-    //    link.setAttribute("href", document.getElementById('preview-img').src);
-    //    link.click();
+    document.getElementById("save-capture-button").addEventListener('click', () =>
+    {
+        let link = document.createElement("a");
+        let fileName = new Date().toLocaleString().replaceAll(':', '-').replaceAll('/', '-') + " AR.png";
+        link.download = fileName;
+        link.setAttribute("download", fileName);
+        link.setAttribute("href", document.getElementById('preview-img').src);
+        link.click();
 
-    //    makeOverlay('preview', 'hide');
-    //});
+        makeOverlay('preview', 'hide');
+    });
+    document.getElementById("retake-button").addEventListener('click', () =>
+    {
+        makeOverlay('preview', 'hide');
+    });
 
-    //document.getElementById("retake-button").addEventListener('click', () =>
-    //{
-    //    makeOverlay('preview', 'hide');
-    //});
-
-    //entity.addEventListener("model-loaded", () => { makeOverlay('loading', 'hide'); });
-    //window.matchMedia('screen and (orientation:portrait)')
-    //    .addEventListener("change", e => handleOrientation(e));
+    entity.addEventListener("model-loaded", () => { makeOverlay('loading', 'hide'); });
+    window.matchMedia('screen and (orientation:portrait)')
+        .addEventListener("change", e => handleOrientation(e));
     //window.addEventListener("orientationchange", handleOrientation)
-    //window.addEventListener("fullscreenchange", handleFullScreen, false);
+    window.addEventListener("fullscreenchange", handleFullScreen, false);
     window.addEventListener('resize', () =>
     {
         let newHeight = window.innerHeight + 'px';
-        //loadingOverlay.style.height = newHeight;
-        //fullscreenOverlay.style.height = newHeight;
-        //rotateOverlay.style.height = newHeight;
-        //snapOverlay.style.height = newHeight;
-        //previewOverlay.style.height = newHeight;
-        //document.getElementsByClassName('controls')[0].style.height = newHeight;
+        loadingOverlay.style.height = newHeight;
+        fullscreenOverlay.style.height = newHeight;
+        rotateOverlay.style.height = newHeight;
+        snapOverlay.style.height = newHeight;
+        previewOverlay.style.height = newHeight;
+        document.getElementsByClassName('controls')[0].style.height = newHeight;
     });
 
     let activeRegion = ZingTouch.Region(document.body, false, false);

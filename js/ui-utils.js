@@ -1,4 +1,4 @@
-/* function makeOverlay(type, operation)
+function makeOverlay(type, operation)
 {
     function hideOverlay(overlay)
     {
@@ -55,21 +55,21 @@
                 hideOverlay(rotateOverlay);
             break;
     }
-} */
+}
 
-/* function handleOrientation(e)
+function handleOrientation(e)
 {
     if (!e) e = window.matchMedia('screen and (orientation:portrait)');
 
     makeOverlay('rotate', e.matches ? 'show' : 'hide');
 
-     if (screen.orientation.angle == 90 || screen.orientation.angle == 270)
-         makeOverlay('rotate', 'hide')
-     else
-         makeOverlay('rotate', 'show')
-} */
+    // if (screen.orientation.angle == 90 || screen.orientation.angle == 270)
+    //     makeOverlay('rotate', 'hide')
+    // else
+    //     makeOverlay('rotate', 'show')
+}
 
-/* function handleFullScreen()
+function handleFullScreen()
 {
     var isInFullScreen = (document.fullscreenElement && document.fullscreenElement !== null) ||
         (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
@@ -81,7 +81,7 @@
     else
         makeOverlay('fullscreen', 'hide');
 }
- */
+
 function requestFullScreen()
 {
     var isInFullScreen = (document.fullscreenElement && document.fullscreenElement !== null) ||
